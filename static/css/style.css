@@ -15,7 +15,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
-    background: #0b2239;
+    background: #111031;
 }
 header .header-left {
     display: flex;
@@ -25,7 +25,7 @@ header .header-left .logo {
     width: 140px;
 }
 header .header-left nav {
-    margin-left: 50px;
+    margin-left: 100px;
 }
 header .header-left nav ul {
     display: flex;
@@ -41,42 +41,12 @@ nav ul li a:hover,
 nav ul li a.active {
     color: #fff;
 }
-nav .login-signup {
-    display: none;
-}
-header .header-right {
-    display: flex;
-    align-items: center;
-}
-header .login-signup {
-    color: #cfd9e0;
-    font-weight: bold;
-}
-header .login-signup a {
-    display: inline-block;
-    color: #0b2239;
-    background: #4ad295;
-    padding: 5px 12px;
-    border-radius: 5px;
-}
-header .header-right .hamburger {
-    margin-left: 20px;
-    cursor: pointer;
-    display: none;
-}
-header .header-right .hamburger div {
-    width: 30px;
-    height: 2px;
-    margin: 6px 0;
-    background: #fff;
-}
+/* Added CSS for mobile responsiveness */
 @media only screen and (max-width: 1000px) {
     header {
         padding: 0 20px;
     }
-    header .header-right .hamburger {
-        display: block;
-    }
+    /* Added CSS for mobile menu */
     header .header-left nav {
         margin: 0;
         position: absolute;
@@ -92,12 +62,14 @@ header .header-right .hamburger div {
     }
     header .header-left nav.active {
         top: 70px;
+        z-index: 1; /* Adjusted z-index to bring the menu above other content */
     }
     header .header-left nav ul {
         display: block;
     }
 }
 @media only screen and (max-width: 500px) {
+    /* Adjusted CSS for login-signup section in mobile view */
     nav .login-signup {
         display: block;
         margin-top: 20px;

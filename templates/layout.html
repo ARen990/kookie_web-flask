@@ -17,7 +17,7 @@
             <nav>
                 <ul>
                     <li>
-                        <a href= "{{ url_for('index') }}" class="active">Home</a>
+                        <a href= "{{ url_for('index') }}">Home</a>
                     </li>
                     <li>
                         <a href="{{ url_for('arsenal') }}">Arsenal</a>
@@ -45,3 +45,10 @@
             nav.classList.toggle("active");
         }
     </script>
+    <main>
+        {% block content %}
+        
+        {% endblock %}
+    </main>
+</body>
+</html>
